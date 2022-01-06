@@ -1,37 +1,56 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import React from 'react'
 
+import {  Route, Link, Router } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Dashboard from './pages/dashboard/Dashboard'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
+import { StylesProvider, ThemeProvider } from '@material-ui/core'
+import { createTheme } from './theme'
+import {
+  createStyles,
+  jssPreset,
+  makeStyles
+} from '@material-ui/core';
+import useSettings from './hooks/useSettings'
+
+
+const useStyles = makeStyles(() => createStyles({
+  '@global': {
+    '*': {
+      boxSizing: 'border-box',
+      margin: 0,
+      padding: 0,
+    },
+    html: {
+      '-webkit-font-smoothing': 'antialiased',
+      '-moz-osx-font-smoothing': 'grayscale',
+      height: '100%',
+      width: '100%'
+    },
+    body: {
+      height: '100%',
+      width: '100%'
+    },
+    '#root': {
+      height: '100%',
+      width: '100%'
+    }
+  }
+}));
 
 function App() {
-  return (
-    <main className="flex justify-between p-4">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
 
-      <nav>
-        <ul className="flex gap-[1rem]">
-          <li className="link">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="link">
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li className="link">
-            <Link to="/login">Login</Link>
-          </li>
-          <li className="link">
-            <Link to="/signup">Signup</Link>
-          </li>
-        </ul>
-      </nav>
-    </main>
+  // useStyles();
+  // const { settings } = useSettings();
+
+  return (
+    <ThemeProvider >
+      <StylesProvider >
+           {/* <Login/> */}
+           <Signup/>
+      </StylesProvider>
+    </ThemeProvider>
   )
 }
 
