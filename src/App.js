@@ -1,19 +1,26 @@
-import React from 'react'
-
-import {  Route, Link, Router } from 'react-router-dom'
-import Home from './pages/home/Home'
-import Dashboard from './pages/dashboard/Dashboard'
-import Login from './pages/login/Login'
-import Signup from './pages/signup/Signup'
-import { StylesProvider, ThemeProvider } from '@material-ui/core'
-import { createTheme } from './theme'
+import React from 'react';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { create } from 'jss';
+import rtl from 'jss-rtl';
+import MomentUtils from '@date-io/moment';
+import { SnackbarProvider } from 'notistack';
 import {
   createStyles,
   jssPreset,
-  makeStyles
+  makeStyles,
+  StylesProvider,
+  ThemeProvider
 } from '@material-ui/core';
-import useSettings from './hooks/useSettings'
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import Auth from './components/Auth';
+import ScrollReset from './components/ScrollReset';
+import useSettings from './hooks/useSettings';
+import { createTheme } from './theme';
+import Routes from './Routes';
 
+const history = createBrowserHistory();
+const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 
 const useStyles = makeStyles(() => createStyles({
   '@global': {
@@ -40,18 +47,26 @@ const useStyles = makeStyles(() => createStyles({
 }));
 
 function App() {
+  useStyles();
 
-  // useStyles();
-  // const { settings } = useSettings();
+  const { settings } = useSettings();
 
   return (
-    <ThemeProvider >
-      <StylesProvider >
-           {/* <Login/> */}
-           <Signup/>
+    <ThemeProvider theme={createTheme(settings)}>
+      <StylesProvider jss={jss}>
+        <MuiPickersUtilsProvider utils={MomentUtils}>
+          <SnackbarProvider maxSnack={1}>
+            <Router history={history}>
+              <Auth>
+                <ScrollReset />
+                <Routes />
+              </Auth>
+            </Router>
+          </SnackbarProvider>
+        </MuiPickersUtilsProvider>
       </StylesProvider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

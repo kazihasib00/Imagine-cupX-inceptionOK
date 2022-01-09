@@ -1,0 +1,165 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import clsx from 'clsx';
+import {
+  Box,
+  Button,
+  Card,
+  CardHeader,
+  Divider,
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+  Typography,
+  makeStyles
+} from '@material-ui/core';
+import LockOpenIcon from '@material-ui/icons/LockOpenOutlined';
+import PersonIcon from '@material-ui/icons/PersonOutline';
+import Label from './../../../../components/Label';
+
+const getFullName = (data) => {
+  var first, honorifics, last, middle;
+  if (typeof data === "object") {
+    honorifics = '';
+    first = '';
+    last = '';
+    middle = '';
+    if ((data != null ? data.honorifics : void 0) != null) {
+      honorifics = data.honorifics + ". ";
+    }
+    if ((data != null ? data.first : void 0) != null) {
+      first = data.first;
+    }
+    if ((data != null ? data.middle : void 0) != null) {
+      middle = " " + data.middle;
+    }
+    if ((data != null ? data.last : void 0) != null) {
+      last = " " + data.last;
+    }
+    return honorifics + first + middle + last;
+  } else {
+    return data;
+  }
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {},
+  fontWeightMedium: {
+    fontWeight: theme.typography.fontWeightMedium
+  },
+  actionIcon: {
+    marginRight: theme.spacing(1)
+  }
+}));
+
+function UserInfo({ user, className, ...rest }) {
+  const classes = useStyles();
+
+  return (
+    <Card
+      className={clsx(classes.root, className)}
+      {...rest}
+    >
+      <CardHeader title="User info" />
+      <Divider />
+      <Table>
+        <TableBody>
+          <TableRow>
+            <TableCell className={classes.fontWeightMedium}>
+              Name
+            </TableCell>
+            <TableCell>
+              <Typography
+                variant="body1"
+                color="textPrimary"
+              >
+                {getFullName(user.name)}
+              </Typography>
+            </TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell className={classes.fontWeightMedium}>
+              Phone
+            </TableCell>
+            <TableCell>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                {user.phoneNumber}
+              </Typography>
+              <Label color={user.isVerified ? 'success' : 'error'}>
+                {user.isVerified
+                  ? 'Phone verified'
+                  : 'Phone not verified'}
+              </Label>
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className={classes.fontWeightMedium}>
+              Gender
+            </TableCell>
+            <TableCell>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                {user.gender}
+              </Typography>
+            </TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell className={classes.fontWeightMedium}>
+              Blood Group
+            </TableCell>
+            <TableCell>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                {user.bloodGroup}
+              </Typography>
+            </TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell className={classes.fontWeightMedium}>
+              Country
+            </TableCell>
+            <TableCell>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                {user.country}
+              </Typography>
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className={classes.fontWeightMedium}>
+              Address
+            </TableCell>
+            <TableCell>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                {user.address.addressLine1 ? user.address.addressLine1 : ''}
+              </Typography>
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </Card>
+  );
+}
+
+UserInfo.propTypes = {
+  className: PropTypes.string,
+  user: PropTypes.object.isRequired
+};
+
+export default UserInfo;
