@@ -36,7 +36,7 @@ class AuthService {
   }
 
   loginWithEmailAndPassword = (emailOrPhone, password) => new Promise((resolve, reject) => {
-    axios.post('/bdemr-app-login-new', { emailOrPhone, password })
+    axios.post('/inceptionOK-app-login-new', { emailOrPhone, password })
       .then((response) => {
         console.log({ response })
         if (!response.data.hasError) {

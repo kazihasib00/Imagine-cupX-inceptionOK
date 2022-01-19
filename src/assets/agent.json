@@ -1,0 +1,26 @@
+{
+  "agents": [
+    {
+      "id": 19001,
+      "name": "Ashraful Islam",
+      "age": 27,
+      "address": "Gulshan",
+      "city": "Dhaka",
+      "phone": "01711111111",
+      "email": "ai@gmail.com",
+      "coverage_area": "Gulshan",
+      "total_collected": 0
+    },
+    {
+      "id": 19002,
+      "name": "Jamilur Rahman",
+      "age": 31,
+      "address": "Bashundhara R/A",
+      "city": "Dhaka",
+      "phone": "01711111112",
+      "email": "ar@gmail.com",
+      "coverage_area": "Kuril",
+      "total_collected": 5
+    }
+  ]
+}

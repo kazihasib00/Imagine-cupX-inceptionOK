@@ -11,6 +11,8 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -25,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
 
 function ProfileDetails({ user, className, ...rest }) {
   const classes = useStyles();
+  const account = useSelector((state) => state.account);
+  console.log({ account });
 
   return (
     <Card
@@ -48,14 +52,14 @@ function ProfileDetails({ user, className, ...rest }) {
             variant="h3"
             color="textPrimary"
           >
-            {`${user.firstName} ${user.lastName}`}
+            {`${account.user.name}`}
           </Typography>
-          <Typography
+          {/* <Typography
             color="textPrimary"
             variant="body1"
           >
             {`${user.state}, ${user.country}`}
-          </Typography>
+          </Typography> */}
           <Typography
             color="textSecondary"
             variant="body2"
@@ -65,12 +69,12 @@ function ProfileDetails({ user, className, ...rest }) {
         </Box>
       </CardContent>
       <CardActions>
-        <Button
+        {/* <Button
           fullWidth
           variant="text"
         >
           Remove picture
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );

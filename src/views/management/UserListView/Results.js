@@ -312,13 +312,13 @@ function Results({ className, users, ...rest }) {
                   Name
                 </TableCell>
                 <TableCell>
-                  Gender
+                  Age
                 </TableCell>
                 <TableCell>
-                  Blood Group
+                  Address
                 </TableCell>
                 <TableCell>
-                  Phone Number
+                  Job
                 </TableCell>
                 <TableCell align="right">
                   Actions
@@ -357,7 +357,7 @@ function Results({ className, users, ...rest }) {
                           <Link
                             color="inherit"
                             component={RouterLink}
-                            to={`/app/management/users/${user.serial}`}
+                            to={`/app/management/users/${user.id}`}
                             variant="h6"
                           >
                             {user.name}
@@ -372,13 +372,13 @@ function Results({ className, users, ...rest }) {
                       </Box>
                     </TableCell>
                     <TableCell>
-                      {user.gender}
+                      {user.age}
                     </TableCell>
                     <TableCell>
-                      {user.bloodGroup}
+                      {user.address} , {user.city}
                     </TableCell>
                     <TableCell>
-                      {user.phoneNumber}
+                      {user.job}
                     </TableCell>
                     <TableCell align="right">
                       <IconButton

@@ -2,7 +2,7 @@ import _ from 'lodash';
 import jwt from 'jsonwebtoken';
 import mock from 'src/utils/mock';
 
-const JWT_SECRET = 'bdemr-top-secret-key';
+const JWT_SECRET = 'inceptionOK-top-secret-key';
 const JWT_EXPIRES_IN = '2 days';
 
 const db = {
@@ -12,7 +12,7 @@ const db = {
     bio: 'Anaesthesiologist',
     canHire: false,
     country: 'BD',
-    email: 'mahmudul@bdemr.com',
+    email: 'mahmudul@inceptionOK.com',
     username: 'admin',
     password: 'admin',
     firstName: 'Mahmudul',
@@ -28,7 +28,7 @@ const db = {
 mock.onPost('/api/account/login').reply((config) => {
   const { email, password } = JSON.parse(config.data);
 
-  if (email !== 'admin@bdemr.com' || password !== 'admin') {
+  if (email !== 'admin@inceptionOK.com' || password !== 'admin') {
     return [400, { message: 'Please check your email and password' }];
   }
 

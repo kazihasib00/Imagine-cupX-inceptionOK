@@ -139,13 +139,13 @@ Ekaterina Tankova
       `,
       from: {
         name: 'Ekaterina Tankova',
-        email: 'ekaterina.tankova@bdemr.com',
+        email: 'ekaterina.tankova@inceptionOK.com',
         avatar: '/static/images/avatars/avatar_2.png'
       },
       to: [
         {
           name: 'Katarina Smith',
-          email: 'katarina.smith@bdemr.com',
+          email: 'katarina.smith@inceptionOK.com',
           avatar: null
         }
       ],
@@ -166,13 +166,13 @@ Hey, nice projects! I really liked the one in react. What's your quote on kinda 
       `,
       from: {
         name: 'Adam Denisov',
-        email: 'adam.denisov@bdemr.com',
+        email: 'adam.denisov@inceptionOK.com',
         avatar: '/static/images/avatars/avatar_7.png'
       },
       to: [
         {
           name: 'Katarina Smith',
-          email: 'katarina.smith@bdemr.com',
+          email: 'katarina.smith@inceptionOK.com',
           avatar: null
         }
       ],
@@ -193,13 +193,13 @@ Dear Shen, Your flight is coming up soon. Please don’t forget to check in for 
       `,
       from: {
         name: 'Miller Edwards',
-        email: 'miller.edwards@bdemr.com',
+        email: 'miller.edwards@inceptionOK.com',
         avatar: '/static/images/avatars/avatar_8.png'
       },
       to: [
         {
           name: 'Katarina Smith',
-          email: 'katarina.smith@bdemr.com',
+          email: 'katarina.smith@inceptionOK.com',
           avatar: null
         }
       ],
@@ -220,13 +220,13 @@ My market leading client has another fantastic opportunity for an experienced So
       `,
       from: {
         name: 'Cao Yu',
-        email: 'cao.yu@bdemr.com',
+        email: 'cao.yu@inceptionOK.com',
         avatar: '/static/images/avatars/avatar_3.png'
       },
       to: [
         {
           name: 'Katarina Smith',
-          email: 'katarina.smith@bdemr.com',
+          email: 'katarina.smith@inceptionOK.com',
           avatar: null
         }
       ],

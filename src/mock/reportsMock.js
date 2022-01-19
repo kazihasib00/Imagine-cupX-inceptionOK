@@ -208,7 +208,7 @@ mock.onGet('/api/reports/latest-orders').reply(200, {
       currency: '$',
       user: {
         name: 'Ekaterina Tankova',
-        email: 'ekaterina@bdemr.com'
+        email: 'ekaterina@inceptionOK.com'
       },
       status: 'pending',
       createdAt: moment()
@@ -225,7 +225,7 @@ mock.onGet('/api/reports/latest-orders').reply(200, {
       currency: '$',
       user: {
         name: 'Cao Yu',
-        email: 'cao.yu@bdemr.com'
+        email: 'cao.yu@inceptionOK.com'
       },
       status: 'complete',
       createdAt: moment()
@@ -243,7 +243,7 @@ mock.onGet('/api/reports/latest-orders').reply(200, {
       currency: '$',
       user: {
         name: 'Alex Richardson',
-        email: 'alex.richardson@bdemr.com'
+        email: 'alex.richardson@inceptionOK.com'
       },
       status: 'rejected',
       createdAt: moment()
@@ -261,7 +261,7 @@ mock.onGet('/api/reports/latest-orders').reply(200, {
       currency: '$',
       user: {
         name: 'Anje Keizer',
-        email: 'anje.keiser@bdemr.com'
+        email: 'anje.keiser@inceptionOK.com'
       },
       status: 'pending',
       createdAt: moment()
@@ -279,7 +279,7 @@ mock.onGet('/api/reports/latest-orders').reply(200, {
       currency: '$',
       user: {
         name: 'Clarke Gillebert',
-        email: 'clarke.gillebert@bdemr.com'
+        email: 'clarke.gillebert@inceptionOK.com'
       },
       status: 'complete',
       createdAt: moment()
@@ -297,7 +297,7 @@ mock.onGet('/api/reports/latest-orders').reply(200, {
       currency: '$',
       user: {
         name: 'Merrile Burgett',
-        email: 'merrile.burgett@bdemr.com'
+        email: 'merrile.burgett@inceptionOK.com'
       },
       status: 'complete',
       createdAt: moment()

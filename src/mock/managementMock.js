@@ -7,7 +7,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e887a62195cc5aef7e8ca5d',
       name: 'Ekaterina Tankova',
-      email: 'ekaterina.tankova@bdemr.com',
+      email: 'ekaterina.tankova@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_2.png',
       spent: '500.00',
       currency: '$',
@@ -24,7 +24,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e887ac47eed253091be10cb',
       name: 'Cao Yu',
-      email: 'cao.yu@bdemr.com',
+      email: 'cao.yu@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_3.png',
       spent: '300.00',
       currency: '$',
@@ -42,7 +42,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e887b209c28ac3dd97f6db5',
       name: 'Alex Richardson',
-      email: 'alex.richardson@bdemr.com',
+      email: 'alex.richardson@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_4.png',
       spent: '0.00',
       currency: '$',
@@ -60,7 +60,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e887b7602bdbc4dbb234b27',
       name: 'Anje Keizer',
-      email: 'anje.keizer@bdemr.com',
+      email: 'anje.keizer@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_5.png',
       spent: '5,600.00',
       currency: '$',
@@ -78,7 +78,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e86809283e28b96d2d38537',
       name: 'Katarina Smith',
-      email: 'katarina.smith@bdemr.com',
+      email: 'katarina.smith@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_6.png',
       spent: '500.00',
       currency: '$',
@@ -96,7 +96,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e86805e2bafd54f66cc95c3',
       name: 'Adam Denisov',
-      email: 'adam.denisov@bdemr.com',
+      email: 'adam.denisov@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_7.png',
       spent: '0.00',
       currency: '$',
@@ -114,7 +114,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e887a1fbefd7938eea9c981',
       name: 'Miller Edwards',
-      email: 'miller.edwards@bdemr.com',
+      email: 'miller.edwards@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_8.png',
       spent: '0.00',
       currency: '$',
@@ -132,7 +132,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e887d0b3d090c1b8f162003',
       name: 'Emilee Simchenko',
-      email: 'emilee.simchenko@bdemr.com',
+      email: 'emilee.simchenko@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_9.png',
       spent: '100.00',
       currency: '$',
@@ -150,7 +150,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e88792be2d4cfb4bf0971d9',
       name: 'Elliott Stone',
-      email: 'elliott.stone@bdemr.com',
+      email: 'elliott.stone@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_10.png',
       spent: '1,000.00',
       currency: '$',
@@ -168,7 +168,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e8877da9a65442b11551975',
       name: 'Shen Zhi',
-      email: 'shen.zhi@bdemr.com',
+      email: 'shen.zhi@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_11.png',
       spent: '0.00',
       orders: 0,
@@ -185,7 +185,7 @@ mock.onGet('/api/management/users').reply(200, {
     {
       id: '5e8680e60cba5019c5ca6fda',
       name: 'Merrile Burgett',
-      email: 'merrile.burgett@bdemr.com',
+      email: 'merrile.burgett@inceptionOK.com',
       avatar: '/static/images/avatars/avatar_12.png',
       spent: '200.00',
       currency: '$',
@@ -206,7 +206,7 @@ mock.onGet('/api/management/users').reply(200, {
 mock.onGet('/api/management/users/1').reply(200, {
   user: {
     fullName: 'Ekaterina Tankova',
-    email: 'ekaterina@bdemr.com',
+    email: 'ekaterina@inceptionOK.com',
     phone: '+55 748 327 439',
     state: 'Alabama',
     country: 'United States',

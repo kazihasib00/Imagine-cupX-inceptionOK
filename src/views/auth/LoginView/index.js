@@ -108,7 +108,7 @@ function LoginView() {
               variant="subtitle1"
               color="textSecondary"
             >
-              Sign in with your bdemr credentials
+              Sign in with your inceptionOK credentials
             </Typography>
 
             <Box mt={3}>

@@ -67,38 +67,35 @@ const navConfig = [
             title: 'All Children',
             href: '/app/management/users'
           },
-          {
-            title: 'Bookings',
-            href: '/app/management/records'
-          },
-          {
-            title: 'Invoices',
-            href: '/app/management/invoices'
-          },
-          {
-            title: 'Visits',
-            href: '/app/management/records'
-          },
+          // {
+          //   title: 'Bookings',
+          //   href: '/app/management/records'
+          // },
+          // {
+          //   title: 'Invoices',
+          //   href: '/app/management/invoices'
+          // },
+          // {
+          //   title: 'Visits',
+          //   href: '/app/management/records'
+          // },
 
-          {
-            title: 'Records',
-            href: '/app/management/records'
-          },
+          // {
+          //   title: 'Records',
+          //   href: '/app/management/records'
+          // },
         ]
       },
       {
-        title: 'Agents',
+        title: 'Agent',
         icon: UsersIcon,
-        href: '/app/management/agents',
+        href: '/app/management/agent',
         items: [
           {
-            title: 'Agent Leaderboard',
-            href: '/app/management/agent-leaderboard'
+            title: 'All Agent',
+            href: '/app/management/agents'
           },
-          {
-            title: 'Agent Wallet',
-            href: '/app/management/wallet-list'
-          },
+         
         ]
       },
       {

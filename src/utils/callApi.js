@@ -6,7 +6,7 @@ let axiosConfig = {
 };
 
 // if (process.env.NODE_ENV !== 'production') {
-//   axiosConfig.baseURL = 'https://bdemr.services/api/1'
+//   axiosConfig.baseURL = 'https://inceptionOK.services/api/1'
 // }
 
 const callApi = axios.create(axiosConfig);

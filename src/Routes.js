@@ -88,6 +88,11 @@ const routesConfig = [
         component: lazy(() => import('./views/management/UserEditView'))
       },
       {
+        exact:true,
+        path:'/app/management/agents',
+        component:lazy(()=>import('./views/management/AgentListView'))
+      },
+      {
         component: () => <Redirect to="/404" />
       }
     ]

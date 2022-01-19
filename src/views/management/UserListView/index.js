@@ -16,6 +16,9 @@ import Header from './Header';
 import Results from './Results';
 import getFullName from './../../../utils/getFullName';
 
+const data = require('./../../../assets/child.json')
+// console.log('aaa',data);
+
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.dark,
@@ -28,27 +31,32 @@ const useStyles = makeStyles((theme) => ({
 function UserListView() {
   const classes = useStyles();
   const isMountedRef = useIsMountedRef();
-  const [users, setUserList] = useState(null);
+  const [users, setUserList] = useState([]);
   const account = useSelector((state) => state.account);
 
-  const getUserList = useCallback(() => {
-    callApi
-      .post('/admin--get-user-list', { apiKey: account.user.apiKey })
-      .then((response) => {
-        console.log({ response });
-        if (isMountedRef.current) {
-          setUserList(response.data.data);
-        }
-      });
-  }, [isMountedRef]);
+  // const getUserList = useCallback(() => {
+  //   callApi
+  //     .post('/admin--get-user-list', { apiKey: account.user.apiKey })
+  //     .then((response) => {
+  //       console.log({ response });
+  //       if (isMountedRef.current) {
+  //         setUserList(response.data.data);
+  //       }
+  //     });
+  // }, [isMountedRef]);
+
+  // useEffect(() => {
+  //   getUserList();
+  // }, [getUserList]);
 
   useEffect(() => {
-    getUserList();
-  }, [getUserList]);
+    setUserList(data.childrens)
+  }, [])
 
   if (!users) {
     return null;
   }
+  console.log(users);
 
   return (
     <Page
