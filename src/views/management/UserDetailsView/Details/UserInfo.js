@@ -81,61 +81,16 @@ function UserInfo({ user, className, ...rest }) {
 
           <TableRow>
             <TableCell className={classes.fontWeightMedium}>
-              Phone
+              Age
             </TableCell>
             <TableCell>
               <Typography
                 variant="body2"
                 color="textSecondary"
               >
-                {user.phoneNumber}
+                {user.age}
               </Typography>
-              <Label color={user.isVerified ? 'success' : 'error'}>
-                {user.isVerified
-                  ? 'Phone verified'
-                  : 'Phone not verified'}
-              </Label>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className={classes.fontWeightMedium}>
-              Gender
-            </TableCell>
-            <TableCell>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-              >
-                {user.gender}
-              </Typography>
-            </TableCell>
-          </TableRow>
-
-          <TableRow>
-            <TableCell className={classes.fontWeightMedium}>
-              Blood Group
-            </TableCell>
-            <TableCell>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-              >
-                {user.bloodGroup}
-              </Typography>
-            </TableCell>
-          </TableRow>
-
-          <TableRow>
-            <TableCell className={classes.fontWeightMedium}>
-              Country
-            </TableCell>
-            <TableCell>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-              >
-                {user.country}
-              </Typography>
+              
             </TableCell>
           </TableRow>
           <TableRow>
@@ -147,10 +102,39 @@ function UserInfo({ user, className, ...rest }) {
                 variant="body2"
                 color="textSecondary"
               >
-                {user.address.addressLine1 ? user.address.addressLine1 : ''}
+                {user.address} , {user.city}
               </Typography>
             </TableCell>
           </TableRow>
+
+          <TableRow>
+            <TableCell className={classes.fontWeightMedium}>
+              Education
+            </TableCell>
+            <TableCell>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                {user.education}
+              </Typography>
+            </TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell className={classes.fontWeightMedium}>
+              Job
+            </TableCell>
+            <TableCell>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                {user.job}
+              </Typography>
+            </TableCell>
+          </TableRow>
+          
         </TableBody>
       </Table>
     </Card>

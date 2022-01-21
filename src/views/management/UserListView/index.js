@@ -50,7 +50,7 @@ function UserListView() {
   // }, [getUserList]);
 
   useEffect(() => {
-    setUserList(data.childrens)
+    setUserList(data.childs)
   }, [])
 
   if (!users) {

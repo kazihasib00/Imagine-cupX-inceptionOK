@@ -79,12 +79,12 @@ const routesConfig = [
       },
       {
         exact: true,
-        path: '/app/management/users/:serial',
+        path: '/app/management/users/:id',
         component: lazy(() => import('./views/management/UserDetailsView'))
       },
       {
         exact: true,
-        path: '/app/management/users/:serial/edit',
+        path: '/app/management/users/:id/edit',
         component: lazy(() => import('./views/management/UserEditView'))
       },
       {
