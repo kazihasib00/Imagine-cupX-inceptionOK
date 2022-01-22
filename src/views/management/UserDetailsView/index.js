@@ -22,6 +22,9 @@ import useIsMountedRef from './../../../hooks/useIsMountedRef';
 import Header from './Header';
 import Details from './Details';
 
+const data = require('./../../../assets/child.json')
+// console.log('ddd',data);
+
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.dark,
@@ -37,22 +40,31 @@ function UserDetailsView() {
   const [user, setUser] = useState(null);
   const [currentTab, setCurrentTab] = useState('details');
   const account = useSelector((state) => state.account);
-  const { serial } = useParams();
+  const { id } = useParams();
+  const searchId = id
+  // console.log(id);
 
-  const getUser = useCallback(() => {
-    axios
-      .post('/admin--get-user-details', { apiKey: account.user.apiKey, serial: serial })
-      .then((response) => {
-        console.log({response})
-        if (isMountedRef.current) {
-          setUser(response.data.data);
-        }
-      });
-  }, [isMountedRef]);
+  // const getUser = useCallback(() => {
+  //   axios
+  //     .post('/admin--get-user-details', { apiKey: account.user.apiKey, serial: serial })
+  //     .then((response) => {
+  //       console.log({response})
+  //       if (isMountedRef.current) {
+  //         setUser(response.data.data);
+  //       }
+  //     });
+  // }, [isMountedRef]);
 
-  useEffect(() => {
-    getUser();
-  }, [getUser]);
+  // useEffect(() => {
+  //   getUser();
+  // }, [getUser]);
+
+  useEffect(()=>{
+    const userData = data.childs.filter((i) => i.id == searchId)
+    setUser(userData[0])
+  },[])
+
+  console.log('user',user);
 
   if (!user) {
     return null;

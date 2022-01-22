@@ -61,14 +61,14 @@ function Header({ className, user, ...rest }) {
             variant="body1"
             color="textPrimary"
           >
-            {user.serial}
+            {user.id}
           </Typography>
         </Breadcrumbs>
         <Typography
           variant="h3"
           color="textPrimary"
         >
-          {user.fullName}
+          {user.name}
         </Typography>
       </Grid>
       <Grid item>
@@ -76,7 +76,7 @@ function Header({ className, user, ...rest }) {
           color="secondary"
           variant="contained"
           component={RouterLink}
-          to={`/app/management/users/${user.serial}/edit`}
+          to={`/app/management/users/${user.id}/edit`}
         >
           <SvgIcon
             fontSize="small"
