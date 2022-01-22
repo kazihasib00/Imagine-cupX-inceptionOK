@@ -17,6 +17,7 @@ import {
 import LockOpenIcon from '@material-ui/icons/LockOpenOutlined';
 import PersonIcon from '@material-ui/icons/PersonOutline';
 import Label from './../../../../components/Label';
+import { ExampleChart } from '../../../../Charts';
 
 const getFullName = (data) => {
   var first, honorifics, last, middle;
@@ -137,6 +138,7 @@ function UserInfo({ user, className, ...rest }) {
           
         </TableBody>
       </Table>
+      <ExampleChart/>
     </Card>
   );
 }
