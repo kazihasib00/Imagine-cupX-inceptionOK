@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import { useHistory } from 'react-router';
+import React, { useEffect, useState } from 'react'
+import { Link as RouterLink } from 'react-router-dom'
+import { useHistory } from 'react-router'
 import {
   Avatar,
   Button,
@@ -13,15 +13,21 @@ import {
   Link,
   Typography,
   colors,
-  makeStyles
-} from '@material-ui/core';
-import { Alert } from '@material-ui/lab';
-import LockIcon from '@material-ui/icons/Lock';
-import Page from './../../../components/Page';
-import Logo from './../../../components/Logo';
-import LoginForm from './LoginForm';
+  makeStyles,
+} from '@material-ui/core'
+import { Alert } from '@material-ui/lab'
+import LockIcon from '@material-ui/icons/Lock'
+import Page from './../../../components/Page'
+import Logo from './../../../components/Logo'
+import LoginForm from './LoginForm'
+import { loginRequest } from '../../../authConfig'
+import { useMsal } from '@azure/msal-react'
+import { useIsAuthenticated } from '@azure/msal-react'
+import { setUserData } from '../../../actions/accountActions'
+import { useDispatch } from 'react-redux'
+import { callMsGraph } from '../../../graph'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     justifyContent: 'center',
     backgroundColor: theme.palette.background.dark,
@@ -30,10 +36,10 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '100%',
     flexDirection: 'column',
     paddingBottom: 80,
-    paddingTop: 80
+    paddingTop: 80,
   },
   backButton: {
-    marginLeft: theme.spacing(2)
+    marginLeft: theme.spacing(2),
   },
   card: {
     overflow: 'visible',
@@ -42,11 +48,11 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       flexGrow: 1,
       flexBasis: '50%',
-      width: '50%'
-    }
+      width: '50%',
+    },
   },
   content: {
-    padding: theme.spacing(8, 4, 3, 4)
+    padding: theme.spacing(8, 4, 3, 4),
   },
   icon: {
     backgroundColor: colors.green[500],
@@ -57,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     top: -32,
     left: theme.spacing(3),
     height: 64,
-    width: 64
+    width: 64,
   },
   media: {
     borderTopRightRadius: 4,
@@ -68,68 +74,146 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'flex-end',
     [theme.breakpoints.down('md')]: {
-      display: 'none'
-    }
-  }
-}));
+      display: 'none',
+    },
+  },
+}))
 
 function LoginView() {
-  const classes = useStyles();
-  const history = useHistory();
+  const { instance, accounts, inProgress } = useMsal()
+
+  const [accessToken, setAccessToken] = useState(null)
+  const [graphData, setGraphData] = useState(null)
+
+  const name = accounts[0] && accounts[0].name
+
+  const isAuthenticated = useIsAuthenticated()
+  const dispatch = useDispatch()
+
+  function RequestAccessToken() {
+    const request = {
+      ...loginRequest,
+      account: accounts[0],
+    }
+
+    // Silently acquires an access token which is then attached to a request for Microsoft Graph data
+    instance
+      .acquireTokenSilent(request)
+      .then(response => {
+        setAccessToken(response.accessToken)
+      })
+      .catch(e => {
+        instance.acquireTokenPopup(request).then(response => {
+          setAccessToken(response.accessToken)
+        })
+      })
+  }
+
+  function RequestProfileData() {
+    const request = {
+      ...loginRequest,
+      account: accounts[0],
+    }
+
+    // Silently acquires an access token which is then attached to a request for Microsoft Graph data
+    instance
+      .acquireTokenSilent(request)
+      .then(response => {
+        callMsGraph(response.accessToken).then(response =>
+          setGraphData(response)
+        )
+      })
+      .catch(e => {
+        instance.acquireTokenPopup(request).then(response => {
+          callMsGraph(response.accessToken).then(response =>
+            setGraphData(response)
+          )
+        })
+      })
+  }
+
+  useEffect(() => {
+    if (!isAuthenticated) return
+
+    if (!accessToken) {
+      RequestAccessToken()
+    }
+
+    if (accessToken && !graphData) {
+      RequestProfileData()
+    }
+
+    if (graphData) {
+      let user = {
+        name: '',
+      }
+
+      if (graphData.displayName) {
+        user.name = graphData.displayName
+      } else {
+        user.name = graphData.userPrincipalName
+      }
+
+      dispatch(setUserData(user))
+    }
+  }, [isAuthenticated, accessToken, graphData])
+
+  const classes = useStyles()
+  const history = useHistory()
 
   const handleSubmitSuccess = () => {
-    history.push('/app');
-  };
+    history.push('/app')
+  }
+
+  const handleLogin = () => {
+    instance.loginPopup(loginRequest).catch(e => {
+      console.error(e)
+    })
+  }
 
   return (
-    <Page
-      className={classes.root}
-      title="Login"
-    >
+    <Page className={classes.root} title="Login">
       <Container maxWidth="sm">
-        <Box
-          mb={4}
-          display="flex"
-          alignItems="center"
-        >
-          <RouterLink to="/">
+        <Box mb={4} display="flex" alignItems="center">
+          {/* <RouterLink to="/">
             <Logo />
-          </RouterLink>
+          </RouterLink> */}
         </Box>
         <Card className={classes.card}>
           <CardContent className={classes.content}>
-            <Typography
-              variant="h2"
-              color="textPrimary"
-            >
+            <Typography variant="h2" color="textPrimary" align="center">
               Sign in
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              color="textSecondary"
-            >
-              Sign in with your inceptionOK credentials
             </Typography>
 
             <Box mt={3}>
-              <LoginForm onSubmitSuccess={handleSubmitSuccess} />
+              {/* <LoginForm onSubmitSuccess={handleLogin} /> */}
+              <Button
+                color="secondary"
+                fullWidth
+                size="large"
+                type="submit"
+                variant="contained"
+                onClick={handleLogin}
+              >
+                Log In
+              </Button>
             </Box>
             <Box my={2}>
               <Divider />
             </Box>
-            <Link
+            {/* <Link
               component={RouterLink}
               to="/register"
               variant="body2"
               color="textSecondary"
             >
               Create new account
-            </Link>
+            </Link> */}
           </CardContent>
         </Card>
       </Container>
     </Page>
-  );
+  )
 }
 
-export default LoginView;
+export default LoginView

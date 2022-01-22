@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
+import React from 'react'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
 import {
   Avatar,
   Box,
@@ -9,32 +9,28 @@ import {
   CardActions,
   CardContent,
   Typography,
-  makeStyles
-} from '@material-ui/core';
-import { useDispatch, useSelector } from 'react-redux';
+  makeStyles,
+} from '@material-ui/core'
+import { useDispatch, useSelector } from 'react-redux'
 
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {},
   name: {
-    marginTop: theme.spacing(1)
+    marginTop: theme.spacing(1),
   },
   avatar: {
     height: 100,
-    width: 100
-  }
-}));
+    width: 100,
+  },
+}))
 
 function ProfileDetails({ user, className, ...rest }) {
-  const classes = useStyles();
-  const account = useSelector((state) => state.account);
-  console.log({ account });
+  const classes = useStyles()
+  const account = useSelector(state => state.account)
+  console.log({ account })
 
   return (
-    <Card
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <Card className={clsx(classes.root, className)} {...rest}>
       <CardContent>
         <Box
           display="flex"
@@ -42,10 +38,7 @@ function ProfileDetails({ user, className, ...rest }) {
           flexDirection="column"
           textAlign="center"
         >
-          <Avatar
-            className={classes.avatar}
-            src={user.avatar}
-          />
+          <Avatar className={classes.avatar} src={user.avatar} />
           <Typography
             className={classes.name}
             gutterBottom
@@ -60,10 +53,7 @@ function ProfileDetails({ user, className, ...rest }) {
           >
             {`${user.state}, ${user.country}`}
           </Typography> */}
-          <Typography
-            color="textSecondary"
-            variant="body2"
-          >
+          <Typography color="textSecondary" variant="body2">
             {user.timezone}
           </Typography>
         </Box>
@@ -77,12 +67,12 @@ function ProfileDetails({ user, className, ...rest }) {
         </Button> */}
       </CardActions>
     </Card>
-  );
+  )
 }
 
 ProfileDetails.propTypes = {
   className: PropTypes.string,
-  user: PropTypes.object.isRequired
-};
+  user: PropTypes.object.isRequired,
+}
 
-export default ProfileDetails;
+export default ProfileDetails

@@ -1,67 +1,62 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import clsx from 'clsx';
-import * as Yup from 'yup';
-import PropTypes from 'prop-types';
-import { Formik } from 'formik';
+import React from 'react'
+import { useDispatch } from 'react-redux'
+import clsx from 'clsx'
+import * as Yup from 'yup'
+import PropTypes from 'prop-types'
+import { Formik } from 'formik'
 import {
   Box,
   Button,
   TextField,
   FormHelperText,
-  makeStyles
-} from '@material-ui/core';
-import { login } from './../../../actions/accountActions';
+  makeStyles,
+} from '@material-ui/core'
+import { login } from './../../../actions/accountActions'
 
 const useStyles = makeStyles(() => ({
-  root: {}
-}));
+  root: {},
+}))
 
 function LoginForm({ className, onSubmitSuccess, ...rest }) {
-  const classes = useStyles();
-  const dispatch = useDispatch();
-
-
+  const classes = useStyles()
+  const dispatch = useDispatch()
 
   return (
     <Formik
       initialValues={{
-        emailOrPhone: '01234567890',
-        password: '832571'
+        emailOrPhone: '',
+        password: '',
       }}
       validationSchema={Yup.object().shape({
-        emailOrPhone: Yup.string("Enter your Email/Phone Number")
+        emailOrPhone: Yup.string('Enter your Email/Phone Number')
           // .email("Enter a valid email")
-          .required("Email/Phone Number is required")
-          .test('test-name', 'Enter Valid Phone/Email',
-            function (value) {
-              const emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+          .required('Email/Phone Number is required')
+          .test('test-name', 'Enter Valid Phone/Email', function(value) {
+            const emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
 
-              const phoneRegex = /^([0-9]{11,11}(-[0-9]*){0,1}|([\w-]+(?:\.[\w-]+)*)+@\w+\.\w{2,3})$/;
-              let isValidEmail = emailRegex.test(value);
-              let isValidPhone = phoneRegex.test(value);
-              if (!isValidEmail && !isValidPhone) {
-                return false;
-              }
-              return true;
-            }),
-        password: Yup.string().max(255).required('Password is required')
+            const phoneRegex = /^([0-9]{11,11}(-[0-9]*){0,1}|([\w-]+(?:\.[\w-]+)*)+@\w+\.\w{2,3})$/
+            let isValidEmail = emailRegex.test(value)
+            let isValidPhone = phoneRegex.test(value)
+            if (!isValidEmail && !isValidPhone) {
+              return false
+            }
+            return true
+          }),
+        password: Yup.string()
+          .max(255)
+          .required('Password is required'),
       })}
-      onSubmit={async (values, {
-        setErrors,
-        setStatus,
-        setSubmitting
-      }) => {
+      onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
-          await dispatch(login(values.emailOrPhone, values.password));
-          onSubmitSuccess();
+          await dispatch(login(values.emailOrPhone, values.password))
+          onSubmitSuccess()
         } catch (error) {
           console.log({ error })
-          const message = error.message || 'Something went wrong';
+          const message = error.message || 'Something went wrong'
 
-          setStatus({ success: false });
-          setErrors({ submit: message });
-          setSubmitting(false);
+          setStatus({ success: false })
+          setErrors({ submit: message })
+          setSubmitting(false)
         }
       }}
     >
@@ -72,7 +67,7 @@ function LoginForm({ className, onSubmitSuccess, ...rest }) {
         handleSubmit,
         isSubmitting,
         touched,
-        values
+        values,
       }) => (
         <form
           noValidate
@@ -120,25 +115,23 @@ function LoginForm({ className, onSubmitSuccess, ...rest }) {
             </Button>
             {errors.submit && (
               <Box mt={3}>
-                <FormHelperText error>
-                  {errors.submit}
-                </FormHelperText>
+                <FormHelperText error>{errors.submit}</FormHelperText>
               </Box>
             )}
           </Box>
         </form>
       )}
     </Formik>
-  );
+  )
 }
 
 LoginForm.propTypes = {
   className: PropTypes.string,
-  onSubmitSuccess: PropTypes.func
-};
+  onSubmitSuccess: PropTypes.func,
+}
 
 LoginForm.defaultProps = {
-  onSubmitSuccess: () => { }
-};
+  onSubmitSuccess: () => {},
+}
 
-export default LoginForm;
+export default LoginForm
