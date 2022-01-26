@@ -1,5 +1,5 @@
 import React from 'react';
-import { AgeChild, EducationInfo, ExampleChart } from '../../../../Charts';
+import { AgeChild, BasicNeed, EducationInfo, ExampleChart } from '../../../../Charts';
 import {
     Box,
     Button,
@@ -38,15 +38,15 @@ function Results({ user, className, ...rest }) {
             <Grid item xs={2} sm={6} md={6}>
                  <ExampleChart/>
             </Grid>
-                <Grid item xs={2} sm={6} md={6}>
-                        <ExampleChart />
-                </Grid>
-                <Grid item xs={2} sm={6} md={6}>
-                        <AgeChild />
-                </Grid>
-                <Grid item xs={2} sm={4} md={4}>
-                        <EducationInfo />
-                </Grid>
+            <Grid item xs={2} sm={6} md={6}>
+                <BasicNeed/>
+            </Grid>
+            <Grid item xs={2} sm={6} md={6}>
+                <AgeChild />
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+                <EducationInfo />
+            </Grid>
         </Grid>
     </Box>
     );

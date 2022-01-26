@@ -47,7 +47,7 @@ const chartConfigs = {
             "numberSuffix": "%",
             "theme": "ocean",
             animation: 1,
-            animationDuration: 2,
+            animationDuration: 3,
             animateClockwise: 1,
             alphaAnimation: 50
         },
