@@ -138,7 +138,7 @@ function UserInfo({ user, className, ...rest }) {
           
         </TableBody>
       </Table>
-      <ExampleChart/>
+      {/* <ExampleChart/> */}
     </Card>
   );
 }

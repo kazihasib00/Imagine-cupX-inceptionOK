@@ -8,59 +8,46 @@ ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
 
 const chartData = [
     {
-        "label": "Garments",
+        "label": "Primary",
         "value": "290"
     },
     {
-        "label": "Heavy industry",
+        "label": "Uneducated",
         "value": "260"
     },
     {
-        "label": "Hotel/Restaurant",
+        "label": "Secondary",
         "value": "180"
     },
     {
-        "label": "House-hold",
+        "label": "Madrasha",
         "value": "140"
-    },
-    {
-        "label": "Transport",
-        "value": "115"
-    },
-    {
-        "label": "Illegal Work",
-        "value": "100"
-    },
-    {
-        "label": "beggar",
-        "value": "100"
-    },
-    {
-        "label": "UnEmployed",
-        "value": "100"
     }
 ]
 
 const chartConfigs = {
-    type: 'column3d',
+    type: 'doughnut3d',
     width: 600,
     height: 400,
     dataFormat: 'json',
     dataSource: {
         "chart": {
-            "caption": "Child Worker By Industry",
-            "subCaption": "Percentage of child working sector",
+            "caption": "Education Status",
+            "subCaption": "Percentage of child in Education",
             "xAxisName": "Industry",
             "yAxisName": "Child",
             "numberSuffix": "%",
             "theme": "ocean",
-            animationDuration:3
+            animation:1,
+            animationDuration: 3,
+            animateClockwise:1,
+            alphaAnimation:50
         },
         "data": chartData
-        },
+    },
 };
 
-const ChartComponent = () =>{
+const ChartComponent = () => {
     return <ReactFC {...chartConfigs} />;
 }
 
