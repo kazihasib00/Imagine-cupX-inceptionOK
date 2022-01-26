@@ -1,3 +1,4 @@
 import ExampleChart from './ExampleChart'
-
-export {ExampleChart}
+import EducationInfo from './EducationInfo'
+import AgeChild from './AgeChild'
+export { ExampleChart, EducationInfo,AgeChild}

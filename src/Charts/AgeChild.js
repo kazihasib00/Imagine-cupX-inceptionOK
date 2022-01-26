@@ -8,59 +8,54 @@ ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
 
 const chartData = [
     {
-        "label": "Garments",
-        "value": "290"
+        "label": "0-2",
+        "value": "23"
     },
     {
-        "label": "Heavy industry",
-        "value": "260"
+        "label": "3-5",
+        "value": "12"
     },
     {
-        "label": "Hotel/Restaurant",
-        "value": "180"
+        "label": "6-8",
+        "value": "26"
     },
     {
-        "label": "House-hold",
-        "value": "140"
+        "label": "9-11",
+        "value": "11"
     },
     {
-        "label": "Transport",
-        "value": "115"
+        "label": "12-14",
+        "value": "34"
     },
     {
-        "label": "Illegal Work",
-        "value": "100"
+        "label": "15-17",
+        "value": "4"
     },
-    {
-        "label": "beggar",
-        "value": "100"
-    },
-    {
-        "label": "UnEmployed",
-        "value": "100"
-    }
 ]
 
 const chartConfigs = {
-    type: 'column3d',
+    type: 'bar3d',
     width: 600,
     height: 400,
     dataFormat: 'json',
     dataSource: {
         "chart": {
-            "caption": "Child Worker By Industry",
-            "subCaption": "Percentage of child working sector",
-            "xAxisName": "Industry",
+            "caption": "Age Info",
+            "subCaption": "Percentage of child",
+            "xAxisName": "Age",
             "yAxisName": "Child",
             "numberSuffix": "%",
             "theme": "ocean",
-            animationDuration:2
+            animation: 1,
+            animationDuration: 2,
+            animateClockwise: 1,
+            alphaAnimation: 50
         },
         "data": chartData
-        },
+    },
 };
 
-const ChartComponent = () =>{
+const ChartComponent = () => {
     return <ReactFC {...chartConfigs} />;
 }
 

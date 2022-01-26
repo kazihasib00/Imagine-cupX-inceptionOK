@@ -81,8 +81,13 @@ const routesConfig = [
       },
       {
         exact: true,
-        path: '/app/management/agents',
+        path: '/app/management/volunteers',
         component: lazy(() => import('./views/management/AgentListView')),
+      },
+      {
+        exact:true,
+        path:'/app/management/infograhpic',
+        component:lazy(()=>import('./views/management/ChildInfoGraphicView'))
       },
       {
         component: () => <Redirect to="/404" />,

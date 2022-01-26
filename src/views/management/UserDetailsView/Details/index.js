@@ -35,7 +35,7 @@ function Details({ user, className, ...rest }) {
         xl={3}
         xs={12}
       >
-        <Emails />
+        {/* <Emails /> */}
       </Grid>
       <Grid
         item
