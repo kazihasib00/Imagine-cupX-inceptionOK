@@ -1,0 +1,5 @@
+{
+  "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
+  "appService.defaultWebAppToDeploy": "/subscriptions/e9434e07-5e86-450b-a80f-f7c066d768a7/resourceGroups/inception_mic/providers/Microsoft.Web/sites/inceptionMIC",
+  "appService.deploySubpath": "."
+}
