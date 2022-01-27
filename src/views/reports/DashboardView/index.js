@@ -46,7 +46,7 @@ function DashboardView() {
             sm={6}
             xs={12}
           >
-            <ActiveUsers />
+            <ActiveUsers title={'Child'} value={34} />
           </Grid>
           <Grid
             item
@@ -54,7 +54,7 @@ function DashboardView() {
             sm={6}
             xs={12}
           >
-            <ActiveUsers />
+            <ActiveUsers title={'Volunteer'} value={34}/>
           </Grid>
           <Grid
             item
@@ -62,17 +62,9 @@ function DashboardView() {
             sm={6}
             xs={12}
           >
-            <ActiveUsers />
+            <ActiveUsers title={'Organization'} value={34}/>
           </Grid>
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xs={12}
-          >
-            <ActiveUsers />
-          </Grid>
-
+          
         </Grid>
       </Container>
     </Page>
