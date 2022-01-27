@@ -29,10 +29,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function ActiveUsers({ className, ...rest }) {
+function ActiveUsers({ className, title, value, ...rest }) {
   const classes = useStyles();
   const data = {
-    value: '200',
+    value: value,
   };
 
   return (
@@ -47,7 +47,7 @@ function ActiveUsers({ className, ...rest }) {
           variant="overline"
           color="textSecondary"
         >
-          Active Users
+          {title}
         </Typography>
         <Box
           display="flex"
