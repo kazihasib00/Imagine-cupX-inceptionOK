@@ -83,6 +83,7 @@
     "react-feather": "^2.0.3",
     "react-fusioncharts": "^3.1.2",
     "react-helmet": "^5.2.1",
+    "react-hook-form": "^7.25.1",
     "react-markdown": "^4.3.1",
     "react-modal-image": "^2.5.0",
     "react-perfect-scrollbar": "^1.5.8",
@@ -96,6 +97,7 @@
     "redux-form": "^8.3.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^2.1.1",
     "uuid": "^7.0.3",
     "yup": "^0.28.3"
   },

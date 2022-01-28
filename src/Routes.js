@@ -90,6 +90,16 @@ const routesConfig = [
         component:lazy(()=>import('./views/management/ChildInfoGraphicView'))
       },
       {
+        exact:true,
+        path:'/app/management/donation',
+        component:lazy(()=>import('./views/management/Donation'))
+      },
+      {
+        exact:true,
+        path:'/app/management/donation-list',
+        component:lazy(()=>import('./views/management/DonationList'))
+      },
+      {
         component: () => <Redirect to="/404" />,
       },
     ],

@@ -1,0 +1,62 @@
+.container {
+  text-align:center;
+  width: 80%;
+ 
+}
+
+h1,p {
+  font-family: 'Open Sans';
+  color:gray;
+  
+}
+
+.quickLinksWrap {
+   
+    width:100%;
+    min-height:100px;
+   
+  
+}
+.quickPayLinks {
+  display:inline-block;
+  margin-left:10px;
+  
+}
+.customPayButton {
+  display: block;
+  margin:auto;
+  margin-top: 15px;
+  width: 25vmax;
+  height: 10vmax;
+  max-width:125px;
+  max-height:60px;
+  background:green;
+  border-radius: 10px;
+  text-align:center;
+  font-family: 'Open Sans';
+  font-size: 25px;
+  box-shadow: 0px 3px 1px rgba(0,0,0, .3);
+  border:none;
+  color:white;
+}
+.customPayButton:hover {
+  cursor:pointer;
+  background:#1EF270;
+}
+
+
+
+input[type="number"] {
+  display: block;
+  font-size: 30px;
+  width:50vmax;
+  height:8vmax;
+  max-width:140px;
+  max-height:50px;
+  margin: 10px auto;
+  margin-top: 30px;
+  padding: 10px 8px 10px 8px;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5);
+  border: 1px solid #1BD964;
+}
