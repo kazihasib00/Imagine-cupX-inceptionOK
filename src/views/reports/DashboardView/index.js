@@ -28,13 +28,13 @@ function DashboardView() {
         <Header />
         <Grid container spacing={3}>
           <Grid item lg={3} sm={6} xs={12}>
-            <ActiveUsers title={'Child'} value={34} />
+            <ActiveUsers title={'Volunteers'} value={17} />
           </Grid>
           <Grid item lg={3} sm={6} xs={12}>
-            <ActiveUsers title={'Volunteer'} value={34} />
+            <ActiveUsers title={'Monitoring'} value={88} />
           </Grid>
           <Grid item lg={3} sm={6} xs={12}>
-            <ActiveUsers title={'Organization'} value={34} />
+            <ActiveUsers title={'Recovered'} value={9} />
           </Grid>
         </Grid>
 
