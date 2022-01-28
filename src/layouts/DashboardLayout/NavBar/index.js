@@ -121,13 +121,17 @@ const navConfig = [
       },
 
       {
-        title: 'Subscription',
+        title: 'Donation',
         icon: UsersIcon,
-        href: '/app/management/subscriptions',
+        href: '/app/management/donation',
         items: [
           {
-            title: 'Activation Code List',
-            href: '/app/management/activation-code-list'
+            title:'Donation',
+            href:'/app/management/donation'
+          },
+          {
+            title: 'Donation List',
+            href: '/app/management/donation-list'
           },
         ]
       },
