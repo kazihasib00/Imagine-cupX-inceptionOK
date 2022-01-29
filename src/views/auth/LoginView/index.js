@@ -37,6 +37,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     paddingBottom: 80,
     paddingTop: 80,
+    position: 'relative',
   },
   backButton: {
     marginLeft: theme.spacing(2),
@@ -76,6 +77,16 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       display: 'none',
     },
+  },
+  container: {
+    zIndex: 20,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  motto: {
+    color: 'white',
+    marginBottom: '1rem',
   },
 }))
 
@@ -173,44 +184,58 @@ function LoginView() {
 
   return (
     <Page className={classes.root} title="Login">
-      <Container maxWidth="sm">
-        <Box mb={4} display="flex" alignItems="center">
-          {/* <RouterLink to="/">
-            <Logo />
-          </RouterLink> */}
-        </Box>
-        <Card className={classes.card}>
-          <CardContent className={classes.content}>
-            <Typography variant="h2" color="textPrimary" align="center">
-              Sign in
-            </Typography>
+      {/* <img
+        src="/media/logo.png"
+        style={{
+          position: 'absolute',
+          zIndex: 20,
+          width: 150,
+          height: 150,
+          top: 20,
+          left: 20,
+          right: 0,
+          borderRadius: 10,
+        }}
+        alt="Logo"
+      /> */}
 
-            <Box mt={3}>
-              {/* <LoginForm onSubmitSuccess={handleLogin} /> */}
-              <Button
-                color="secondary"
-                fullWidth
-                size="large"
-                type="submit"
-                variant="contained"
-                onClick={handleLogin}
-              >
-                Log In
-              </Button>
-            </Box>
-            <Box my={2}>
-              <Divider />
-            </Box>
-            {/* <Link
-              component={RouterLink}
-              to="/register"
-              variant="body2"
-              color="textSecondary"
-            >
-              Create new account
-            </Link> */}
-          </CardContent>
-        </Card>
+      <video
+        autoPlay
+        muted
+        loop
+        style={{
+          position: 'fixed',
+          inset: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: 10,
+          objectFit: 'none',
+        }}
+      >
+        <source src="/media/mesh.mp4" type="video/mp4" />
+      </video>
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'rgba(0, 0, 0, 0.6)',
+          zIndex: 20,
+        }}
+      ></div>
+      <Container maxWidth="sm" className={classes.container}>
+        <Typography align="center" variant="h2" className={classes.motto}>
+          Save a Soul, Impact on Your Life Style
+        </Typography>
+        <Button
+          color="secondary"
+          size="large"
+          type="submit"
+          variant="contained"
+          onClick={handleLogin}
+          className={classes.loginButton}
+        >
+          Log In
+        </Button>
       </Container>
     </Page>
   )

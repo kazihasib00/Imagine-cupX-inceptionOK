@@ -1,13 +1,18 @@
-import React from 'react';
+import React from 'react'
 
 function Logo(props) {
   return (
     <img
       alt="Logo"
-      src="/static/logo.png"
+      style={{
+        width: 50,
+        height: 50,
+        borderRadius: 5,
+      }}
+      src="/media/logo.png"
       {...props}
     />
-  );
+  )
 }
 
-export default Logo;
+export default Logo
