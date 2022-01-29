@@ -38,22 +38,46 @@ function DashboardView() {
           </Grid>
         </Grid>
 
-        <iframe
-          height={546}
-          style={{ width: '100%', marginTop: '2rem' }}
-          scrolling="no"
-          title="React Game- Elephant Taco Hunt"
-          src="https://codepen.io/sdras/embed/YWBdQd?default-tab=result"
-          frameBorder="no"
-          loading="lazy"
-          allowTransparency="true"
-          allowFullScreen="true"
+        <div
+          style={{
+            position: 'relative',
+          }}
         >
-          See the Pen &lt;a href="https://codepen.io/sdras/pen/YWBdQd"&gt; React
-          Game- Elephant Taco Hunt&lt;/a&gt; by Sarah Drasner (&lt;a
-          href="https://codepen.io/sdras"&gt;@sdras&lt;/a&gt;) on &lt;a
-          href="https://codepen.io"&gt;CodePen&lt;/a&gt;.
-        </iframe>
+          <iframe
+            height={600}
+            style={{ width: '100%', marginTop: '2rem' }}
+            scrolling="no"
+            title="React Game- Elephant Taco Hunt"
+            src="https://codepen.io/sdras/embed/YWBdQd?default-tab=result"
+            frameBorder="no"
+            loading="lazy"
+            allowTransparency="true"
+            allowFullScreen="true"
+          >
+            See the Pen &lt;a href="https://codepen.io/sdras/pen/YWBdQd"&gt;
+            React Game- Elephant Taco Hunt&lt;/a&gt; by Sarah Drasner (&lt;a
+            href="https://codepen.io/sdras"&gt;@sdras&lt;/a&gt;) on &lt;a
+            href="https://codepen.io"&gt;CodePen&lt;/a&gt;.
+          </iframe>
+          <div
+            style={{
+              position: 'absolute',
+              top: 32,
+              width: '100%',
+              height: 53,
+              backgroundColor: '#f4f6f8',
+            }}
+          ></div>
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 4,
+              width: '100%',
+              height: 32,
+              backgroundColor: '#f4f6f8',
+            }}
+          ></div>
+        </div>
       </Container>
     </Page>
   )

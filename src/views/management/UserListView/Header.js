@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
+import React from 'react'
+import { Link as RouterLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
 import {
   Box,
   Breadcrumbs,
@@ -10,30 +10,30 @@ import {
   Link,
   SvgIcon,
   Typography,
-  makeStyles
-} from '@material-ui/core';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+  makeStyles,
+} from '@material-ui/core'
+import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import {
   PlusCircle as PlusCircleIcon,
   Download as DownloadIcon,
-  Upload as UploadIcon
-} from 'react-feather';
+  Upload as UploadIcon,
+} from 'react-feather'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {},
   action: {
     marginBottom: theme.spacing(1),
     '& + &': {
-      marginLeft: theme.spacing(1)
-    }
+      marginLeft: theme.spacing(1),
+    },
   },
   actionIcon: {
-    marginRight: theme.spacing(1)
-  }
-}));
+    marginRight: theme.spacing(1),
+  },
+}))
 
 function Header({ className, ...rest }) {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <Grid
@@ -64,17 +64,11 @@ function Header({ className, ...rest }) {
           >
             Management
           </Link>
-          <Typography
-            variant="body1"
-            color="textPrimary"
-          >
+          <Typography variant="body1" color="textPrimary">
             Users
           </Typography>
         </Breadcrumbs>
-        <Typography
-          variant="h3"
-          color="textPrimary"
-        >
+        <Typography variant="h3" color="textPrimary">
           All Users
         </Typography>
       </Grid>
@@ -84,21 +78,18 @@ function Header({ className, ...rest }) {
           variant="contained"
           className={classes.action}
         >
-          <SvgIcon
-            fontSize="small"
-            className={classes.actionIcon}
-          >
+          <SvgIcon fontSize="small" className={classes.actionIcon}>
             <PlusCircleIcon />
           </SvgIcon>
-          New Child
+          Add new
         </Button>
       </Grid>
     </Grid>
-  );
+  )
 }
 
 Header.propTypes = {
-  className: PropTypes.string
-};
+  className: PropTypes.string,
+}
 
-export default Header;
+export default Header

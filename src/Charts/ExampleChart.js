@@ -48,10 +48,10 @@ const chartConfigs = {
   dataFormat: 'json',
   dataSource: {
     chart: {
-      caption: 'Child Worker By Industry',
-      subCaption: 'Percentage of child working sector',
+      caption: 'Homeless Worker By Industry',
+      subCaption: 'Percentage of homeless working sector',
       xAxisName: 'Industry',
-      yAxisName: 'Child',
+      yAxisName: 'Homeless',
       numberSuffix: '%',
       theme: 'ocean',
       animationDuration: 3,

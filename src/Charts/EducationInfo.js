@@ -33,9 +33,9 @@ const chartConfigs = {
   dataSource: {
     chart: {
       caption: 'Education Status',
-      subCaption: 'Percentage of child in Education',
+      subCaption: 'Percentage of homeless in Education',
       xAxisName: 'Industry',
-      yAxisName: 'Child',
+      yAxisName: 'Homeless',
       numberSuffix: '%',
       theme: 'ocean',
       animation: 1,

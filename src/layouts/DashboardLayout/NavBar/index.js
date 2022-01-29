@@ -1,11 +1,11 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
-import { useLocation, matchPath } from 'react-router';
-import { Link as RouterLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import PerfectScrollbar from 'react-perfect-scrollbar';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react'
+import { useLocation, matchPath } from 'react-router'
+import { Link as RouterLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import PerfectScrollbar from 'react-perfect-scrollbar'
+import PropTypes from 'prop-types'
 import {
   Avatar,
   Box,
@@ -17,9 +17,9 @@ import {
   List,
   ListSubheader,
   Typography,
-  makeStyles
-} from '@material-ui/core';
-import ReceiptIcon from '@material-ui/icons/ReceiptOutlined';
+  makeStyles,
+} from '@material-ui/core'
+import ReceiptIcon from '@material-ui/icons/ReceiptOutlined'
 import {
   Briefcase as BriefcaseIcon,
   Calendar as CalendarIcon,
@@ -39,10 +39,10 @@ import {
   MessageCircle as MessageCircleIcon,
   PieChart as PieChartIcon,
   Share2 as ShareIcon,
-  Users as UsersIcon
-} from 'react-feather';
-import Logo from '../../../components/Logo';
-import NavItem from './NavItem';
+  Users as UsersIcon,
+} from 'react-feather'
+import Logo from '../../../components/Logo'
+import NavItem from './NavItem'
 
 const navConfig = [
   {
@@ -51,25 +51,25 @@ const navConfig = [
       {
         title: 'Dashboard',
         icon: PieChartIcon,
-        href: '/app/reports/dashboard'
-      }
-    ]
+        href: '/app/reports/dashboard',
+      },
+    ],
   },
   {
     subheader: 'Management',
     items: [
       {
-        title: 'Children',
+        title: 'Homeless people',
         icon: UsersIcon,
         href: '/app/management/invoice-list',
         items: [
           {
-            title: 'All Children',
-            href: '/app/management/users'
+            title: 'All people',
+            href: '/app/management/users',
           },
           {
             title: 'Infograhpic',
-            href: '/app/management/infograhpic'
+            href: '/app/management/infograhpic',
           },
           // {
           //   title: 'Invoices',
@@ -84,7 +84,7 @@ const navConfig = [
           //   title: 'Records',
           //   href: '/app/management/records'
           // },
-        ]
+        ],
       },
       {
         title: 'Volunteer',
@@ -93,10 +93,9 @@ const navConfig = [
         items: [
           {
             title: 'All Volunteer',
-            href: '/app/management/volunteers'
+            href: '/app/management/volunteers',
           },
-         
-        ]
+        ],
       },
       {
         title: 'Organizations',
@@ -105,19 +104,19 @@ const navConfig = [
         items: [
           {
             title: 'Organization list',
-            href: '/app/management/organizations'
+            href: '/app/management/organizations',
           },
 
           {
             title: 'Memeber list',
-            href: '/app/management/organizations'
+            href: '/app/management/organizations',
           },
 
           // {
           //   title: 'Organization Wallet',
           //   href: '/app/management/wallet-list'
           // },
-        ]
+        ],
       },
 
       {
@@ -126,14 +125,14 @@ const navConfig = [
         href: '/app/management/donation',
         items: [
           {
-            title:'Donation',
-            href:'/app/management/donation'
+            title: 'Donation',
+            href: '/app/management/donation',
           },
           {
             title: 'Donation List',
-            href: '/app/management/donation-list'
+            href: '/app/management/donation-list',
           },
-        ]
+        ],
       },
 
       // {
@@ -147,11 +146,9 @@ const navConfig = [
       //     },
       //   ]
       // },
-
-
-    ]
+    ],
   },
-];
+]
 
 function renderNavItems({ items, ...rest }) {
   return (
@@ -161,22 +158,17 @@ function renderNavItems({ items, ...rest }) {
         []
       )}
     </List>
-  );
+  )
 }
 
-function reduceChildRoutes({
-  acc,
-  pathname,
-  item,
-  depth = 0
-}) {
-  const key = item.title + depth;
+function reduceChildRoutes({ acc, pathname, item, depth = 0 }) {
+  const key = item.title + depth
 
   if (item.items) {
     const open = matchPath(pathname, {
       path: item.href,
-      exact: false
-    });
+      exact: false,
+    })
 
     acc.push(
       <NavItem
@@ -190,10 +182,10 @@ function reduceChildRoutes({
         {renderNavItems({
           depth: depth + 1,
           pathname,
-          items: item.items
+          items: item.items,
         })}
       </NavItem>
-    );
+    )
   } else {
     acc.push(
       <NavItem
@@ -204,53 +196,45 @@ function reduceChildRoutes({
         info={item.info}
         title={item.title}
       />
-    );
+    )
   }
 
-  return acc;
+  return acc
 }
 
 const useStyles = makeStyles(() => ({
   mobileDrawer: {
-    width: 256
+    width: 256,
   },
   desktopDrawer: {
     width: 256,
     top: 64,
-    height: 'calc(100% - 64px)'
+    height: 'calc(100% - 64px)',
   },
   avatar: {
     cursor: 'pointer',
     width: 64,
-    height: 64
-  }
-}));
+    height: 64,
+  },
+}))
 
-function NavBar({ openMobile, onMobileClose, }) {
-  const classes = useStyles();
-  const location = useLocation();
-  const { user } = useSelector((state) => state.account);
+function NavBar({ openMobile, onMobileClose }) {
+  const classes = useStyles()
+  const location = useLocation()
+  const { user } = useSelector(state => state.account)
 
   useEffect(() => {
     if (openMobile && onMobileClose) {
-      onMobileClose();
+      onMobileClose()
     }
     // eslint-disable-next-line
-  }, [location.pathname]);
+  }, [location.pathname])
 
   const content = (
-    <Box
-      height="100%"
-      display="flex"
-      flexDirection="column"
-    >
+    <Box height="100%" display="flex" flexDirection="column">
       <PerfectScrollbar options={{ suppressScrollX: true }}>
         <Hidden lgUp>
-          <Box
-            p={1}
-            display="flex"
-            justifyContent="center"
-          >
+          <Box p={1} display="flex" justifyContent="center">
             <RouterLink to="/">
               <Logo />
             </RouterLink>
@@ -258,25 +242,25 @@ function NavBar({ openMobile, onMobileClose, }) {
         </Hidden>
         <Divider />
         <Box p={2}>
-          {navConfig.map((config) => (
+          {navConfig.map(config => (
             <List
               key={config.subheader}
-              subheader={(
-                <ListSubheader
-                  disableGutters
-                  disableSticky
-                >
+              subheader={
+                <ListSubheader disableGutters disableSticky>
                   {config.subheader}
                 </ListSubheader>
-              )}
+              }
             >
-              {renderNavItems({ items: config.items, pathname: location.pathname })}
+              {renderNavItems({
+                items: config.items,
+                pathname: location.pathname,
+              })}
             </List>
           ))}
         </Box>
       </PerfectScrollbar>
     </Box>
-  );
+  )
 
   return (
     <>
@@ -302,12 +286,12 @@ function NavBar({ openMobile, onMobileClose, }) {
         </Drawer>
       </Hidden>
     </>
-  );
+  )
 }
 
 NavBar.propTypes = {
   onMobileClose: PropTypes.func,
-  openMobile: PropTypes.bool
-};
+  openMobile: PropTypes.bool,
+}
 
-export default NavBar;
+export default NavBar

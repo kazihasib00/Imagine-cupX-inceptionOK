@@ -41,9 +41,9 @@ const chartConfigs = {
   dataSource: {
     chart: {
       caption: 'Age Info',
-      subCaption: 'Percentage of child',
+      subCaption: 'Percentage of homeless',
       xAxisName: 'Age',
-      yAxisName: 'Child',
+      yAxisName: 'Homeless',
       numberSuffix: '%',
       theme: 'ocean',
       animation: 1,
