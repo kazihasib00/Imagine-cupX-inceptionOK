@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Header({ className, ...rest }) {
+function Header({ className, handleAgentAdd, ...rest }) {
   const classes = useStyles()
 
   return (
@@ -77,6 +77,7 @@ function Header({ className, ...rest }) {
           color="secondary"
           variant="contained"
           className={classes.action}
+          onClick={handleAgentAdd}
         >
           <SvgIcon fontSize="small" className={classes.actionIcon}>
             <PlusCircleIcon />
