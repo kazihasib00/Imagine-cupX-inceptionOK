@@ -9,27 +9,27 @@ ReactFC.fcRoot(FusionCharts, Charts, FusionTheme)
 const chartData = [
   {
     label: '5-7',
-    value: '11',
+    value: '14',
   },
   {
     label: '8-10',
-    value: '12',
+    value: '34',
   },
   {
     label: '9-12',
-    value: '21',
+    value: '29',
   },
   {
     label: '13-16',
-    value: '18',
+    value: '13',
   },
   {
     label: '16-18',
-    value: '24',
+    value: '7',
   },
   {
     label: '18+',
-    value: '14',
+    value: '3',
   },
 ]
 

@@ -107,10 +107,10 @@ const navConfig = [
             href: '/app/management/organizations',
           },
 
-          {
-            title: 'Memeber list',
-            href: '/app/management/organizations',
-          },
+          // {
+          //   title: 'Memeber list',
+          //   href: '/app/management/organizations',
+          // },
 
           // {
           //   title: 'Organization Wallet',

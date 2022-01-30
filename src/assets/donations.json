@@ -3,42 +3,42 @@
     {
         "id" : 1,
         "name":"Mubasshir Ahmed",
-        "donatedAmount" : 5,
+        "donatedAmount" : 412,
         "reference" : "xyatoe",
         "donerType" : "Premium"
     },
     {
         "id": 2,
         "name": "Mubasshir Ahmed",
-        "donatedAmount": 5,
+        "donatedAmount": 343,
         "reference": "xyatoe",
         "donerType": "Golden"
     },
     {
         "id": 3,
         "name": "Mubasshir Ahmed",
-        "donatedAmount": 5,
+        "donatedAmount": 98,
         "reference": "xyatoe",
         "donerType": "Silver"
     },
     {
         "id": 4,
         "name": "Mubasshir Ahmed",
-        "donatedAmount": 5,
+        "donatedAmount": 8,
         "reference": "xyatoe",
         "donerType": "Regular"
     },
     {
         "id": 5,
         "name": "Mubasshir Ahmed",
-        "donatedAmount": 5,
+        "donatedAmount": 56,
         "reference":"sdwe",
         "donerType": "Regular"
     },
     {
         "id": 6,
         "name": "Mubasshir Ahmed",
-        "donatedAmount": 5,
+        "donatedAmount": 604,
         "reference": "grjhiuehfouj",
         "donerType": "Premium"
     }

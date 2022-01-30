@@ -80,6 +80,11 @@ const routesConfig = [
         component: lazy(() => import('./views/management/UserEditView')),
       },
       {
+        exact:true,
+        path:'/app/management/agents/:id',
+        component:lazy(()=>import('./views/management/AgentDetailsView'))
+      },
+      {
         exact: true,
         path: '/app/management/volunteers',
         component: lazy(() => import('./views/management/AgentListView')),
@@ -98,6 +103,11 @@ const routesConfig = [
         exact:true,
         path:'/app/management/donation-list',
         component:lazy(()=>import('./views/management/DonationList'))
+      },
+      {
+        exact: true,
+        path: '/app/management/organizations',
+        component: lazy(() => import('./views/management/OrganizationListView')),
       },
       {
         component: () => <Redirect to="/404" />,

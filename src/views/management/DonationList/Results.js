@@ -231,7 +231,7 @@ function Results({ className, donations, ...rest}) {
           </Box>
           </TableCell>
           <TableCell>
-            {donation.donatedAmount}
+            {donation.donatedAmount} BDT
           </TableCell>
           <TableCell>
                 {donation.reference} 

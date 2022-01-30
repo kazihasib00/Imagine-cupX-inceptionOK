@@ -73,7 +73,7 @@ function Header({className,...rest}) {
     </Breadcrumbs>
     <Typography variant="h3"
     color="textPrimary">
-        All Donations
+        All Donations (This Month)
     </Typography>
     </Grid>
 
@@ -89,7 +89,7 @@ function Header({className,...rest}) {
     >
         <PlusCircleIcon/>
     </SvgIcon> */}
-     Total Donation 230.34 BDT
+     Total Donation 1521 BDT (This Month)
     </Button>
     </Grid>
 

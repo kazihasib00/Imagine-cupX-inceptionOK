@@ -360,7 +360,7 @@ function Results({ className, agents, ...rest }) {
 <Link
     color="inherit"
     component={RouterLink}
-    to={`/app/management/users/${user.serial}`}
+                                        to={`/app/management/agents/${user.id}`}
      variant="h6"
                                                     >
                                                         {user.name}
