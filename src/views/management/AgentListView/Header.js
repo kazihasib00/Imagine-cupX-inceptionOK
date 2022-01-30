@@ -65,11 +65,11 @@ function Header({ className, handleAgentAdd, ...rest }) {
             Management
           </Link>
           <Typography variant="body1" color="textPrimary">
-            Users
+            Volunteers
           </Typography>
         </Breadcrumbs>
         <Typography variant="h3" color="textPrimary">
-          All Users
+          All Volunteers
         </Typography>
       </Grid>
       <Grid item>

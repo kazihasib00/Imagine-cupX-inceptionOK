@@ -81,7 +81,7 @@ const routesConfig = [
       },
       {
         exact:true,
-        path:'/app/management/agents/:id',
+        path:'/app/management/volunteers/:id',
         component:lazy(()=>import('./views/management/AgentDetailsView'))
       },
       {
