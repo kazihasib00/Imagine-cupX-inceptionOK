@@ -37,14 +37,39 @@ const useStyles = makeStyles((theme) => ({
 const emailOptions = [
   'Send password reset',
   'Send verification code',
-  'Generate activation code',
+  'Send Short Message',
 ];
+
+
 
 function Emails({ className, ...rest }) {
   const classes = useStyles();
   const isMountedRef = useIsMountedRef();
   const [emailOption, setEmailOption] = useState(emailOptions[0]);
   const [emails, setEmails] = useState(null);
+  const [daysWorth, setDaysWorth] = useState()
+  const [count, setCount] = useState()
+
+  const handleDaysChange = (e) => {
+    e.preventDefault()
+    setDaysWorth(e.target.value)
+  }
+
+  const handleCountChange = (e) => {
+    e.preventDefault()
+    setCount(e.target.value)
+  }
+
+  function activationCodeContent() {
+    return (
+      <Box mt={2}>
+        <TextField fullWidth placeholder='Short Message' onChange={(e) => handleDaysChange(e)} />
+
+        <TextField mt={2} fullWidth placeholder='Short Message' onChange={(e) => handleDaysChange(e)} />
+        {/* <TextField placeholder='Total Keys' onChange={e => handleCountChange(e)} /> */}
+      </Box>
+    )
+  }
 
   return (
     <Card
@@ -72,12 +97,17 @@ function Emails({ className, ...rest }) {
             </option>
           ))}
         </TextField>
+
+        {emailOption === 'Send Short Message' ? <Box>
+          {activationCodeContent}
+        </Box> : ''}
+
         <Box mt={2}>
           <Button
             variant="contained"
           >
             <MaiIcon className={classes.actionIcon} />
-            Send email
+            Send
           </Button>
         </Box>
         {emails && (

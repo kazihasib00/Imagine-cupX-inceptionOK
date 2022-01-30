@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Grid, makeStyles } from '@material-ui/core';
 import UserInfo from './UserInfo';
-import Emails from './Emails';
+// import Emails from './Emails';
 
 const useStyles = makeStyles(() => ({
   root: {}

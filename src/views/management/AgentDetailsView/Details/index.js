@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Grid, makeStyles } from '@material-ui/core';
 import AgentInfo from './AgentInfo';
+import Emails from './Emails';
 
 const useStyles = makeStyles(() => ({
     root: {}
@@ -35,7 +36,7 @@ function Details ({agent,className,...rest}){
                 xl={3}
                 xs={12}
             >
-                {/* <Emails /> */}
+                <Emails />
             </Grid>
             <Grid
                 item

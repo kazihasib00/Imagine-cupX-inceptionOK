@@ -224,13 +224,13 @@ function Results({ className, organizations, ...rest }) {
                                 {organization.name}
                                                     </Avatar>
                                                     <div>
-                                                        <Link color="inherit"
+                                                        <p color="inherit"
                                                             component={RouterLink}
                                     to={`/app/management/users/${organization.id}`}
                                                             variant="h6"
                                                         >
                                     {organization.name}
-                                                        </Link>
+                                </p>
                                                     </div>
                                                 </Box>
                                             </TableCell>
