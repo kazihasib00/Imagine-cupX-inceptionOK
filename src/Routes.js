@@ -106,6 +106,11 @@ const routesConfig = [
       },
       {
         exact: true,
+        path: '/app/management/donor/:id',
+        component: lazy(() => import('./views/management/DonationDetailView'))
+      },
+      {
+        exact: true,
         path: '/app/management/organizations',
         component: lazy(() => import('./views/management/OrganizationListView')),
       },

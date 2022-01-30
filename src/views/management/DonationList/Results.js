@@ -222,7 +222,7 @@ function Results({ className, donations, ...rest}) {
           <div>
           <Link color="inherit"
           component={RouterLink}
-          to={`/app/management/users/${donation.id}`}
+          to={`/app/management/donor/${donation.id}`}
                       variant="h6"
           >
           {donation.name}

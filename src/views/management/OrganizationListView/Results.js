@@ -224,7 +224,7 @@ function Results({ className, organizations, ...rest }) {
                                 {organization.name}
                                                     </Avatar>
                                                     <div>
-                                                        <p color="inherit"
+                                                        <p color="black"
                                                             component={RouterLink}
                                     to={`/app/management/users/${organization.id}`}
                                                             variant="h6"

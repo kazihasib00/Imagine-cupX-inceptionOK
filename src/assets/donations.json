@@ -5,42 +5,342 @@
         "name":"Mubasshir Ahmed",
         "donatedAmount" : 412,
         "reference" : "xyatoe",
-        "donerType" : "Premium"
+        "donerType" : "Premium",
+        "donationMonth" : [
+            {
+                "label": "Jan",
+                "value": "4123"
+            },
+            {
+                "label": "Feb",
+                "value": "4633"
+            },
+            {
+                "label": "Mar",
+                "value": "5507"
+            },
+            {
+                "label": "April",
+                "value": "4910"
+            },
+            {
+                "label": "May",
+                "value": "5529"
+            },
+            {
+                "label": "June",
+                "value": "5803"
+            },
+            {
+                "label": "July",
+                "value": "6202"
+            },
+            {
+                "label": "Aug",
+                "value": "6202"
+            },
+            {
+                "label": "Sept",
+                "value": "6202"
+            },
+            {
+                "label": "Oct",
+                "value": "6202"
+            },
+            {
+                "label": "Nov",
+                "value": "6202"
+            },
+            {
+                "label": "Dec",
+                "value": "6202"
+            }
+        ]
     },
     {
         "id": 2,
         "name": "Mubasshir Ahmed",
         "donatedAmount": 343,
         "reference": "xyatoe",
-        "donerType": "Golden"
+        "donerType": "Golden",
+        "donationMonth": [
+            {
+                "label": "Jan",
+                "value": "4123"
+            },
+            {
+                "label": "Feb",
+                "value": "4633"
+            },
+            {
+                "label": "Mar",
+                "value": "5507"
+            },
+            {
+                "label": "April",
+                "value": "4910"
+            },
+            {
+                "label": "May",
+                "value": "5529"
+            },
+            {
+                "label": "June",
+                "value": "5803"
+            },
+            {
+                "label": "July",
+                "value": "6202"
+            },
+            {
+                "label": "Aug",
+                "value": "6202"
+            },
+            {
+                "label": "Sept",
+                "value": "6202"
+            },
+            {
+                "label": "Oct",
+                "value": "6202"
+            },
+            {
+                "label": "Nov",
+                "value": "6202"
+            },
+            {
+                "label": "Dec",
+                "value": "6202"
+            }
+        ]
     },
     {
         "id": 3,
         "name": "Mubasshir Ahmed",
         "donatedAmount": 98,
         "reference": "xyatoe",
-        "donerType": "Silver"
+        "donerType": "Silver",
+        "donationMonth": [
+            {
+                "label": "Jan",
+                "value": "4123"
+            },
+            {
+                "label": "Feb",
+                "value": "4633"
+            },
+            {
+                "label": "Mar",
+                "value": "5507"
+            },
+            {
+                "label": "April",
+                "value": "4910"
+            },
+            {
+                "label": "May",
+                "value": "5529"
+            },
+            {
+                "label": "June",
+                "value": "5803"
+            },
+            {
+                "label": "July",
+                "value": "6202"
+            },
+            {
+                "label": "Aug",
+                "value": "6202"
+            },
+            {
+                "label": "Sept",
+                "value": "6202"
+            },
+            {
+                "label": "Oct",
+                "value": "6202"
+            },
+            {
+                "label": "Nov",
+                "value": "6202"
+            },
+            {
+                "label": "Dec",
+                "value": "6202"
+            }
+        ]
     },
     {
         "id": 4,
         "name": "Mubasshir Ahmed",
         "donatedAmount": 8,
         "reference": "xyatoe",
-        "donerType": "Regular"
+        "donerType": "Regular",
+        "donationMonth": [
+            {
+                "label": "Jan",
+                "value": "4123"
+            },
+            {
+                "label": "Feb",
+                "value": "4633"
+            },
+            {
+                "label": "Mar",
+                "value": "5507"
+            },
+            {
+                "label": "April",
+                "value": "4910"
+            },
+            {
+                "label": "May",
+                "value": "5529"
+            },
+            {
+                "label": "June",
+                "value": "5803"
+            },
+            {
+                "label": "July",
+                "value": "6202"
+            },
+            {
+                "label": "Aug",
+                "value": "6202"
+            },
+            {
+                "label": "Sept",
+                "value": "6202"
+            },
+            {
+                "label": "Oct",
+                "value": "6202"
+            },
+            {
+                "label": "Nov",
+                "value": "6202"
+            },
+            {
+                "label": "Dec",
+                "value": "6202"
+            }
+        ]
     },
     {
         "id": 5,
         "name": "Mubasshir Ahmed",
         "donatedAmount": 56,
         "reference":"sdwe",
-        "donerType": "Regular"
+        "donerType": "Regular",
+        "donationMonth": [
+            {
+                "label": "Jan",
+                "value": "4123"
+            },
+            {
+                "label": "Feb",
+                "value": "4633"
+            },
+            {
+                "label": "Mar",
+                "value": "5507"
+            },
+            {
+                "label": "April",
+                "value": "4910"
+            },
+            {
+                "label": "May",
+                "value": "5529"
+            },
+            {
+                "label": "June",
+                "value": "5803"
+            },
+            {
+                "label": "July",
+                "value": "6202"
+            },
+            {
+                "label": "Aug",
+                "value": "6202"
+            },
+            {
+                "label": "Sept",
+                "value": "6202"
+            },
+            {
+                "label": "Oct",
+                "value": "6202"
+            },
+            {
+                "label": "Nov",
+                "value": "6202"
+            },
+            {
+                "label": "Dec",
+                "value": "6202"
+            }
+        ]
     },
     {
         "id": 6,
         "name": "Mubasshir Ahmed",
         "donatedAmount": 604,
         "reference": "grjhiuehfouj",
-        "donerType": "Premium"
+        "donerType": "Premium",
+        "donationMonth": [
+            {
+                "label": "Jan",
+                "value": "4123"
+            },
+            {
+                "label": "Feb",
+                "value": "4633"
+            },
+            {
+                "label": "Mar",
+                "value": "5507"
+            },
+            {
+                "label": "April",
+                "value": "4910"
+            },
+            {
+                "label": "May",
+                "value": "5529"
+            },
+            {
+                "label": "June",
+                "value": "5803"
+            },
+            {
+                "label": "July",
+                "value": "6202"
+            },
+            {
+                "label": "Aug",
+                "value": "6202"
+            },
+            {
+                "label": "Sept",
+                "value": "6202"
+            },
+            {
+                "label": "Oct",
+                "value": "6202"
+            },
+            {
+                "label": "Nov",
+                "value": "6202"
+            },
+            {
+                "label": "Dec",
+                "value": "6202"
+            }
+        ]
     }
     ]
 }

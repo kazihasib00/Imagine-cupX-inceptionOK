@@ -35,9 +35,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const emailOptions = [
+  'Send Short Message',
   'Send password reset',
   'Send verification code',
-  'Send Short Message',
 ];
 
 
