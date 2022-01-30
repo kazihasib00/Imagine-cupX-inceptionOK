@@ -3,7 +3,7 @@
     {
       "id": 1001,
       "name": "Spark",
-      "capacity": 150,
+      "capacity": 30000,
       "city": "Dhaka",
       "contact": "s@gmail.com",
       "specialities": "Food",
@@ -12,7 +12,7 @@
     {
       "id": 1002,
       "name": "Ocean",
-      "capacity": 200,
+      "capacity": 100000,
       "city": "Dhaka",
       "contact": "o@gmail.com",
       "specialities": "Health",
@@ -21,7 +21,7 @@
     {
       "id": 1003,
       "name": "Corp",
-      "capacity": 80,
+      "capacity": 80000,
       "city": "Dhaka",
       "contact": "c@gmail.com",
       "specialities": "Clothing",
@@ -30,7 +30,7 @@
     {
       "id": 1004,
       "name": "TNT",
-      "capacity": 100,
+      "capacity": 50000,
       "city": "Dhaka",
       "contact": "t@gmail.com",
       "specialities": "Shelter",
@@ -39,7 +39,7 @@
     {
       "id": 1005,
       "name": "Victoria",
-      "capacity": 100,
+      "capacity": 40000,
       "city": "Dhaka",
       "contact": "v@gmail.com",
       "specialities": "Education",
@@ -48,7 +48,7 @@
     {
       "id": 1006,
       "name": "Rise",
-      "capacity": 120,
+      "capacity": 120000,
       "city": "Dhaka",
       "contact": "r@gmail.com",
       "specialities": "Shelter",
@@ -57,11 +57,11 @@
     {
       "id": 1007,
       "name": "Canyon",
-      "capacity": 150,
+      "capacity": 65000,
       "city": "Dhaka",
       "contact": "c@gmail.com",
-      "specialities": "Education"
+      "specialities": "Education",
+      "amounts": 90
     }
   ]
 }
-
